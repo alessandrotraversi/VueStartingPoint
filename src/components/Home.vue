@@ -1,9 +1,11 @@
 <template lang="pug">
   <div class="hello">
-    p.miaclass
+    img(src="../assets/logo.png")/
+    p.myclass
       | aaa
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
+    <router-view></router-view>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
       <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
@@ -24,13 +26,13 @@
 
 <script>
 
-alert('ciao');
 $(document).ready(function(){
-  $('.miaclass').css('color','#f00');
+  $('.myclass').css('color','#f00');
 });
 
+console.log('componente home.vue caricato');
+
 export default {
-  name: 'hello',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
@@ -41,7 +43,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
 h1, h2 {
   font-weight: normal;
 }

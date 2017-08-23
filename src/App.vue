@@ -1,18 +1,24 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
+  <div class="container">
+    <p>{{msg}}</p>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+console.log('App.vue caricato');
 export default {
-  name: 'app'
+  name: 'app',
+  data () {
+    return {
+      msg: 'Dummy text'
+    }
+  }
 }
 </script>
 
 <style lang="scss">
-//@import 'styles/app';
+@import './app.scss';
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
